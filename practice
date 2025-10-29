@@ -1,0 +1,3 @@
+ID="sample_id"; 
+
+loadstring(game:HttpGet("raw_script_url"))()
